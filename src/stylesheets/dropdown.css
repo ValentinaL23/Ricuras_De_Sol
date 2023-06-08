@@ -10,14 +10,15 @@
 }
 
 .container {
-  width: 100%;
+  width: 50%;
   height: 100vh;
 }
 
 .dropdown {
-  width: 400px;
+  width: 210px;
   margin: 100px auto;
   position: relative;
+  font-size: 10px;
 }
 
 .dropdown .dropdown-btn {
@@ -29,6 +30,7 @@
   align-items: center;
   cursor: pointer;
   justify-content: space-between;
+  border-radius: 50px;
 }
 
 .dropdown .dropdown-cont {

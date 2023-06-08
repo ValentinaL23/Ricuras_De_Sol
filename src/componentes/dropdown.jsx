@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import '../stylesheets/dropdown.css'
 
-export function Dropdown({ selected, setSelected }) {
+function Dropdown({ selected, setSelected }) {
   const [isActive, seIstActive] = useState(false)
   const opciones = ["Pequeñas", "Delgadas", "Gruesas"]
 
@@ -27,3 +28,5 @@ export function Dropdown({ selected, setSelected }) {
     </div>
   );
 }
+
+export default Dropdown
