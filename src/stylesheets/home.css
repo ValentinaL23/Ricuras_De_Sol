@@ -34,8 +34,25 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 1px;
+}
+
+.logo-date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -13%;
+}
+
+.logo-RS {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 60%;
+  margin-left: -10px;
 }
 
 .forml {
@@ -44,7 +61,7 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 50px;
+  margin-top: -25px;
   margin-bottom: 100px;
 }
 
@@ -69,7 +86,8 @@ input {
 }
 
 .fecha {
-  width: 36%;
+  width: 60%;
+  margin-left: 40px;
   font-size: 10px;
   border: 1px solid;
   display: flex;
@@ -93,6 +111,10 @@ input {
   border-radius: 0 50px 50px 0;
 }
 
+.tmp {
+  margin-top: -20px;
+}
+
 .dropdown {
   margin: auto;
 }
@@ -101,11 +123,42 @@ input {
   width: 50%;
   height: 3em;
   border: none;
-  background-color: rgba(255, 135, 98, 0.753);
-  box-shadow: 4px 4px 4px rgba(251, 36, 36, 0.5);
+  font-size: 15px;
+  background-color: #FFC369;
+  box-shadow: 4px 4px 4px #FFB054;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.menu {
+  width: 70%;
+  margin-bottom: -75px;
+}
+
+p {
+  font-size: smaller;
+}
+
+.hide {
+  position: absolute;
+  transform: scale(0);
+}
+
+.pedido-popup {
+  position: absolute;
+  height: 20em;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+  background-color: #F5F5F5;
+  color: #000;
+  bottom: 0;
+  transform: scale(1);
+  transition: 1.5s;
 }

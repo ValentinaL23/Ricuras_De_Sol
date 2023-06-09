@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../stylesheets/loginForm.css'
 
-function Login() {
+function Login({ setUser }) {
   const [nombre, setNombre] = useState("")
   const [contraseña, setContraseña] = useState("")
   const [error, setError] = useState(false)
@@ -14,6 +14,8 @@ function Login() {
       return
     }
     setError(false)
+
+    setUser([nombre])
   }
 
   return (

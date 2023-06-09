@@ -9,20 +9,13 @@
   src: url("../fonts/Montserrat-SemiBold.ttf");
 }
 
-.container {
+.page {
   width: 50%;
   height: 100vh;
 }
 
-.dropdown {
-  width: 210px;
-  margin: 100px auto;
-  position: relative;
-  font-size: 10px;
-}
-
-.dropdown .dropdown-btn {
-  padding: 15px 20px;
+select {
+  padding: 11px 45px;
   background: rgb(229, 226, 226);
   font-weight: bold;
   color: #333;
@@ -31,25 +24,4 @@
   cursor: pointer;
   justify-content: space-between;
   border-radius: 50px;
-}
-
-.dropdown .dropdown-cont {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  padding: 10px;
-  background: #fff;
-  font-weight: 500;
-  color: #333;
-  width: 95%;
-}
-
-.dropdown .dropdown-cont .dropdown-item {
-  padding: 10px;
-  cursor: pointer;
-  transition: all 0.2s; 
-}
-
-.dropdown .dropdown-cont .dropdown-item:hover {
-  background: #f4f4f4;
 }

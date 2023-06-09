@@ -1,30 +1,20 @@
 import React, { useState } from "react";
 import '../stylesheets/dropdown.css'
 
-function Dropdown({ selected, setSelected }) {
-  const [isActive, seIstActive] = useState(false)
-  const opciones = ["Pequeñas", "Delgadas", "Gruesas"]
+function Dropdown() {
+  const opciones = ['Pequeñas', 'Delgadas', 'Gruesas']
+  const [selectState, setselectState] = useState('')
+  console.log(selectState)
 
   return (
     <div className="dropdown">
-      <div className="dropdown-btn" onClick={(e) => seIstActive}>
-      {selected}
-        <span className="fas fa-caret-down"></span>
-      </div>
-      {isActive && (
-        <div className="dropdown-cont">
-          {opciones.map((opcion) => (
-            <div
-              onClick={(e) => {
-                setSelected(opcion);
-                seIstActive(false);
-              }}
-              className="dropdown-item">
-              {opcion}
-              </div>
-          ))}
-        </div>
-      )}
+      <select>
+        {
+          opciones.map(opcion => {
+            return <option>{opcion}</option>
+          })
+        }
+      </select>
     </div>
   );
 }
