@@ -3,31 +3,24 @@ import Dropdown from "./dropdown";
 import '../stylesheets/home.css'
 import RSol from '../img/RSol copy.png'
 import menu from '../img/Menu.png'
+import Check from '../icono/Check.png'
 
 export default function Home() {
-  const [selected, setSelected] = useState("Seleccione una opción")
-  const [error, setError] = useState(false)
-  var input = document.getElementById('numero');
+  const [nombrehm, setNombrehm] = useState("")
+  const [celular, setCelular] = useState("")
+  const [ctpaq, setCtpaq] = useState("")
+
+  /*var input = document.getElementById('numero');
   
   input?.addEventListener('input', () => {
     if (this.value.length > 12) 
        this.value = this.value.slice(10);
-  })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    if (nombre === "" || contraseña === "") {
-      setError(true)
-      return
-    }
-    setError(false)
-  }
+  })*/
 
   const [popupStyle, showPopup] = useState("hide")
   const popup = () => {
     showPopup("pedido-popup")
-    setTimeout(() => showPopup("hide"), 4000)
+    setTimeout(() => showPopup("hide"), 5000)
   }
 
   return (
@@ -44,20 +37,24 @@ export default function Home() {
         <div className="datos">
           <input className="dato-nombre"
             type="text"
-            placeholder="Nombre" />
+            placeholder="Nombre"
+            value={nombrehm}
+            onChange={e => setNombrehm(e.target.value)} />
           <input className="dato-celular"
             type="number"
-            min="7" max="10"
-            id="numero"
-            placeholder="Celular" />
+            placeholder="Celular"
+            value={celular}
+          onChange={e => setCelular(e.target.value)} />
         </div>
         <div>
           <label htmlFor="Cpaquetes">Cantidad de paquetes:</label><br/>
-          <input type="number" name="Cpaquetes"/>
+          <input type="number" name="Cpaquetes"
+            value={ctpaq}
+            onChange={e => setCtpaq(e.target.value)} />
         </div>
         <div className="tmp">
           <label htmlFor="Tpaquete">Tamaño de paquete:</label><br/>
-          <Dropdown selected={selected} setSelected={setSelected}/>
+          <Dropdown />
         </div>
         <button className="pedido-btn" onClick={popup}>
           enviar pedido
@@ -67,9 +64,11 @@ export default function Home() {
           alt="Menú de paquetes" />
       </form>
       <div className={popupStyle}>
+        {/* <img className="logo-check"
+          src={Check}
+          alt="Pedido aprobado" /> */}
         <p>pedido aprobado</p>
       </div>
-      {error && <p>Todos los campos{"\n"} son obligatorios</p>}
     </div>
   )
 }

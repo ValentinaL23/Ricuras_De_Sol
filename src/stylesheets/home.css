@@ -9,10 +9,6 @@
   src: url("../fonts/Montserrat-SemiBold.ttf");
 }
   
-h1 {
-  text-shadow: 3px 3px 6px rgb(156, 150, 150);
-}
-  
 .page {
   height: 100vh;
   width: 100%;
@@ -38,6 +34,14 @@ h1 {
   padding-bottom: 1px;
 }
 
+.logo-RS {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 60%;
+  margin-left: -10px;
+}
+
 .logo-date {
   display: flex;
   flex-direction: row;
@@ -47,13 +51,7 @@ h1 {
   margin-top: -13%;
 }
 
-.logo-RS {
-  display: flex;
-  flex-direction: row;
-  width: 60%;
-  height: 60%;
-  margin-left: -10px;
-}
+
 
 .forml {
   display: flex;
@@ -138,13 +136,13 @@ input {
   margin-bottom: -75px;
 }
 
-p {
-  font-size: smaller;
-}
+
 
 .hide {
   position: absolute;
   transform: scale(0);
+  align-items: center;
+  justify-content: center;
 }
 
 .pedido-popup {
@@ -157,8 +155,17 @@ p {
   justify-content: center;
   border-radius: 2em;
   background-color: #F5F5F5;
+  background-image: url("../icono/Check.png");
+  background-repeat: no-repeat;
+  background-size: 130px 130px;
+  background-position: 50% 20%;
   color: #000;
   bottom: 0;
   transform: scale(1);
   transition: 1.5s;
+}
+
+p {
+  font-size: smaller;
+  font-weight: 200;
 }

@@ -1,7 +1,7 @@
 import LoginForm from './componentes/loginForm';
 import Home from './componentes/home';
 import { useState } from 'react';
-import Dropdown from './componentes/dropdown';
+import Registro from './componentes/registro';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
         ? <LoginForm setUser={setUser} />
         : <Home />
       }
-      {/* <Dropdown /> */}
+      {/* <Registro /> */}
     </div>
   );
 }

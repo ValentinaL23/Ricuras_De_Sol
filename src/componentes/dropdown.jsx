@@ -3,8 +3,6 @@ import '../stylesheets/dropdown.css'
 
 function Dropdown() {
   const opciones = ['Pequeñas', 'Delgadas', 'Gruesas']
-  const [selectState, setselectState] = useState('')
-  console.log(selectState)
 
   return (
     <div className="dropdown">

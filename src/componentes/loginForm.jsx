@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../stylesheets/loginForm.css'
+// import Registro from "./registro";
 
 function Login({ setUser }) {
   const [nombre, setNombre] = useState("")
@@ -19,7 +20,7 @@ function Login({ setUser }) {
   }
 
   return (
-    <div className="cover">
+    <div className="login">
       <h1>Login</h1>
       <form className="formulario" onSubmit={handleSubmit}>
         <input
@@ -32,7 +33,7 @@ function Login({ setUser }) {
           onChange={e => setContraseña(e.target.value)} />
         <button className="login-btn">Iniciar Sesión</button>
       </form>
-      {error && <p>Todos los campos{"\n"} son obligatorios</p>}
+      {error && <p>Todos los campos son obligatorios</p>}
     </div>
   )
 }
