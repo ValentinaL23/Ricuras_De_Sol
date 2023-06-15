@@ -3,25 +3,19 @@ import Dropdown from "./dropdown";
 import '../stylesheets/home.css'
 import RSol from '../img/RSol copy.png'
 import menu from '../img/Menu.png'
+import Modal from "./Modal";
 import Check from '../icono/Check.png'
 
 export default function Home() {
   const [nombrehm, setNombrehm] = useState("")
   const [celular, setCelular] = useState("")
   const [ctpaq, setCtpaq] = useState("")
-
   /*var input = document.getElementById('numero');
   
   input?.addEventListener('input', () => {
     if (this.value.length > 12) 
        this.value = this.value.slice(10);
   })*/
-
-  const [popupStyle, showPopup] = useState("hide")
-  const popup = () => {
-    showPopup("pedido-popup")
-    setTimeout(() => showPopup("hide"), 5000)
-  }
 
   return (
     <div className="home">
@@ -50,25 +44,21 @@ export default function Home() {
           <label htmlFor="Cpaquetes">Cantidad de paquetes:</label><br/>
           <input type="number" name="Cpaquetes"
             value={ctpaq}
-            onChange={e => setCtpaq(e.target.value)} />
+            onChange={e => setCtpaq(e.target.value)} 
+            />
         </div>
         <div className="tmp">
           <label htmlFor="Tpaquete">Tamaño de paquete:</label><br/>
           <Dropdown />
         </div>
-        <button className="pedido-btn" onClick={popup}>
-          enviar pedido
-        </button>
+        <div className="popup">
+          <Modal />
+        </div>
         <img className="menu"
           src={menu}
           alt="Menú de paquetes" />
       </form>
-      <div className={popupStyle}>
-        {/* <img className="logo-check"
-          src={Check}
-          alt="Pedido aprobado" /> */}
-        <p>pedido aprobado</p>
-      </div>
+      
     </div>
   )
 }

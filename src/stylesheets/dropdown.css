@@ -15,7 +15,8 @@
 }
 
 select {
-  padding: 11px 45px;
+  border: none;
+  padding: 11px 55px;
   background: rgb(229, 226, 226);
   font-weight: bold;
   color: #333;

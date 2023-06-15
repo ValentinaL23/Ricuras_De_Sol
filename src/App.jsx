@@ -1,7 +1,7 @@
-import LoginForm from './componentes/loginForm';
-import Home from './componentes/home';
+import LoginForm from './components/loginForm';
+import Home from './components/home';
 import { useState } from 'react';
-import Registro from './componentes/registro';
+import Registro from './components/registro';
 
 function App() {
 

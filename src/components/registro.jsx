@@ -26,7 +26,7 @@ export default function Registro() {
           className="logo-RSol"
           src={RSol}
           alt="Logo de Ricuras de Sol" />
-        <h1>Login</h1>
+        <h1>Registro</h1>
       </div>
       <form className="formu" onSubmit={handleSubmit}>
         <div className="datos-reg">
