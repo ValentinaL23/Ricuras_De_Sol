@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import Dropdown from "./dropdown";
-import '../stylesheets/home.css'
+import '../stylesheets/home.scss'
 import RSol from '../img/RSol copy.png'
 import menu from '../img/Menu.png'
 import Modal from "./Modal";
-import Check from '../icono/Check.png'
 
 export default function Home() {
   const [nombrehm, setNombrehm] = useState("")
   const [celular, setCelular] = useState("")
   const [ctpaq, setCtpaq] = useState("")
+  const [modalState, setModalState] = useState(false)
+  function openModal() {
+    setModalState(!modalState)
+  }
   /*var input = document.getElementById('numero');
   
   input?.addEventListener('input', () => {
@@ -26,7 +29,6 @@ export default function Home() {
         alt="Logo de Ricuras de Sol" />
         <input className="fecha" type="date" />
       </div>
-
       <form className="forml">
         <div className="datos">
           <input className="dato-nombre"
@@ -42,7 +44,7 @@ export default function Home() {
         </div>
         <div>
           <label htmlFor="Cpaquetes">Cantidad de paquetes:</label><br/>
-          <input type="number" name="Cpaquetes"
+          <input className="cntpaq" type="number" name="Cpaquetes"
             value={ctpaq}
             onChange={e => setCtpaq(e.target.value)} 
             />
@@ -51,8 +53,11 @@ export default function Home() {
           <label htmlFor="Tpaquete">Tamaño de paquete:</label><br/>
           <Dropdown />
         </div>
-        <div className="popup">
-          <Modal />
+        <div className="container">
+          {/* {modalState.toString()} */}
+          <span className="togglemodal" onClick={openModal}>
+            Enviar pedido</span>
+          <Modal toggle={modalState} action={openModal}/>
         </div>
         <img className="menu"
           src={menu}

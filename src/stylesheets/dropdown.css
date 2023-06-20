@@ -16,8 +16,8 @@
 
 select {
   border: none;
-  padding: 11px 55px;
-  background: rgb(229, 226, 226);
+  padding: 15px 70px;
+  background-color: rgba(246, 246, 246, 1);
   font-weight: bold;
   color: #333;
   display: flex;

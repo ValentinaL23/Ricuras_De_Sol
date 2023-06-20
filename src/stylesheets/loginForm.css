@@ -75,6 +75,12 @@ input:focus {  outline-color: rgb(70, 70, 70); }
   text-transform: uppercase;
 }
 
+.registro-btn {
+  border: none;
+  background: none;
+  
+}
+
 .text {
   position: relative;
   bottom: -2em;

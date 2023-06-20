@@ -1,41 +1,21 @@
-import React, { Component, useState } from "react";
-import "../stylesheets/modal.css"
-import Check from '../icono/Check.png'
+import '../stylesheets/modal.scss'
+import Listo from '../icono/ok.svg'
 
-export default function Modal() {
-  const [modal, setModal] = useState(false);
-  const toggleModal = () => {
-    setModal(!modal)
-  }
-
-  setTimeout(() => {
-    setModal
-  }, 10000)
-
-  if (modal) {
-    document.body.classList.add('active-modl')
-  } else {
-    document.body.classList.remove('active-modl')
-  }
+function Modal(props) {
+  const modalState = props.toggle
+  const action = props.action
 
   return (
-    <>
-      <button
-        onClick={toggleModal}
-        className="btn-modal">
-        Enviar pedido
-      </button>
-    
-      {modal && (
-        <div className="modal">
-          <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content">
-            <img src={Check} alt="Listo" />
-            <h3>Pedido Aprobado</h3>
-          </div>
-        </div>
-      )}
-      
-    </>  
-  );
+    <div className={`${'contenido'} ${modalState ? 'active' : ''}`}>
+      <div className='modal'>
+        <img 
+          className='listo'
+          src={Listo} />
+        <p className='pedido'>Pedido Aprobado</p>
+        <div className='close' onClick={action}></div>
+      </div>
+    </div>
+  )
 }
+
+export default Modal;

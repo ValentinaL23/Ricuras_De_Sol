@@ -32,6 +32,7 @@ function Login({ setUser }) {
           value={contraseña}
           onChange={e => setContraseña(e.target.value)} />
         <button className="login-btn">Iniciar Sesión</button>
+        <button className="registro-btn">Registrarse</button>
       </form>
       {error && <p>Todos los campos son obligatorios</p>}
     </div>
