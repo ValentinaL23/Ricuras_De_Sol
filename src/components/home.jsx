@@ -3,7 +3,7 @@ import Dropdown from "./dropdown";
 import '../stylesheets/home.scss'
 import RSol from '../img/RSol copy.png'
 import menu from '../img/Menu.png'
-import Modal from "./Modal";
+import ModalH from './modalH';
 
 export default function Home() {
   const [nombrehm, setNombrehm] = useState("")
@@ -57,7 +57,7 @@ export default function Home() {
           {/* {modalState.toString()} */}
           <span className="togglemodal" onClick={openModal}>
             Enviar pedido</span>
-          <Modal toggle={modalState} action={openModal}/>
+          <ModalH toggle={modalState} action={openModal} />
         </div>
         <img className="menu"
           src={menu}

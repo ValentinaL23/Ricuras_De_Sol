@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import '../stylesheets/registro.css'
+import '../stylesheets/registro.scss'
 import RSol from '../img/RSol copy.png'
+import ModalR from './modalR'
 
 export default function Registro() {
   const [nombre, setNombre] = useState("")
@@ -12,11 +13,18 @@ export default function Registro() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (nombre === "" || contraseña === "") {
+    if (nombre === "" || repContraseña === "") {
       setError(true)
       return
     }
     setError(false)
+
+    setUser([nombre])
+  }
+
+  const [modalStateR, setModalStateR] = useState(false)
+  function abrirModal() {
+    setModalStateR(!modalStateR)
   }
 
   return(
@@ -44,9 +52,13 @@ export default function Registro() {
             value={repContraseña}
             onChange={e => setRepContraseña(e.target.value)} />
         </div>
-          <button className="login-boton">Iniciar Sesión</button>
+          <div className="container-R">
+            <span className="togglemodalR" onClick={abrirModal}>
+              Iniciar Sesión </span>
+              <ModalR toggle={modalStateR} action={abrirModal} />
+          </div>
       </form>
-      {error && <p>Todos los campos{"\n"} son obligatorios</p>}
+      {error && <p className="errorR">Todos los campos son obligatorios</p>}
     </div>
 
 

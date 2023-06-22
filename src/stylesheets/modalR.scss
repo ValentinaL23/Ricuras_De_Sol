@@ -1,0 +1,63 @@
+.contenidoR {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(30, 224, 30);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.5s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  .modalR {
+    display: flex;
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    background-color: #f1efef;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .listoR {
+    width: 110px;
+    display: flex;
+    position: relative;
+    margin: 30px;
+    margin-left: 35px;
+    margin-right: 50px;
+  }
+  .registroE {
+    position: relative;
+    display: flex;
+    font-size: 140%;
+    color: #be298d;
+    text-shadow: 7px 4px 6px #e252b2;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    background: none;
+  }
+  .closeR {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-image: url('../icono/closeR.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+  }
+}

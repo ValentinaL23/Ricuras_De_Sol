@@ -1,5 +1,5 @@
-import '../stylesheets/modal.scss'
-import Listo from '../icono/ok.svg'
+import '../stylesheets/modalH.scss'
+import ListoH from '../icono/okH.svg'
 
 function Modal(props) {
   const modalState = props.toggle
@@ -10,7 +10,7 @@ function Modal(props) {
       <div className='modal'>
         <img 
           className='listo'
-          src={Listo} />
+          src={ListoH} />
         <p className='pedido'>Pedido Aprobado</p>
         <div className='close' onClick={action}></div>
       </div>

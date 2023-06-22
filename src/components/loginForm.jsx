@@ -35,6 +35,7 @@ function Login({ setUser }) {
         <button className="registro-btn">Registrarse</button>
       </form>
       {error && <p>Todos los campos son obligatorios</p>}
+      
     </div>
   )
 }
