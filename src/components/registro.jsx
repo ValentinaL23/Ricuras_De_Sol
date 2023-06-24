@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../stylesheets/registro.scss'
 import RSol from '../img/RSol copy.png'
 import ModalR from './modalR'
+import { Link } from "react-router-dom";
 
 export default function Registro() {
   const [nombre, setNombre] = useState("")
@@ -18,8 +19,6 @@ export default function Registro() {
       return
     }
     setError(false)
-
-    setUser([nombre])
   }
 
   const [modalStateR, setModalStateR] = useState(false)
@@ -29,12 +28,12 @@ export default function Registro() {
 
   return(
     <div className="registro">
-      <div className="logo-login">
+      <div className="logo-registro">
         <img
           className="logo-RSol"
           src={RSol}
           alt="Logo de Ricuras de Sol" />
-        <h1>Registro</h1>
+        <h1 className="registrarse">Registro</h1>
       </div>
       <form className="formu" onSubmit={handleSubmit}>
         <div className="datos-reg">
@@ -53,12 +52,13 @@ export default function Registro() {
             onChange={e => setRepContraseña(e.target.value)} />
         </div>
           <div className="container-R">
-            <span className="togglemodalR" onClick={abrirModal}>
-              Iniciar Sesión </span>
-              <ModalR toggle={modalStateR} action={abrirModal} />
+            <Link className="togglemodalR" onClick={abrirModal} to='/home'>
+              Iniciar Sesión
+            </Link>
+            <ModalR toggle={modalStateR} action={abrirModal} />
           </div>
       </form>
-      {error && <p className="errorR">Todos los campos son obligatorios</p>}
+      {error && <p>Todos los campos son obligatorios</p>}
     </div>
 
 

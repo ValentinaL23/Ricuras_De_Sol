@@ -16,8 +16,8 @@
 
 select {
   border: none;
-  padding: 15px 70px;
-  background-color: rgba(246, 246, 246, 1);
+  padding: 12px 53px;
+  background-color: rgb(229 226 226);
   font-weight: bold;
   color: #333;
   display: flex;
@@ -25,4 +25,5 @@ select {
   cursor: pointer;
   justify-content: space-between;
   border-radius: 50px;
+  margin-left: 10px;
 }
