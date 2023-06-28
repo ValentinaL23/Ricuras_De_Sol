@@ -20,6 +20,7 @@
   .modalR {
     display: flex;
     position: absolute;
+    flex-direction: column;
     width: 40%;
     height: 30%;
     background-color: #f1efef;
@@ -44,8 +45,20 @@
     text-shadow: 7px 4px 6px #e252b2;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
     background: none;
+  }
+  .dirigir {
+    text-decoration-line: none;
+    width: 190px;
+    height: 50px;
+    background-color: rgb(146, 44, 112);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    margin-top: 40px;
+    cursor: pointer;
   }
   .closeR {
     position: absolute;

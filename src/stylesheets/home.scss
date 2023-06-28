@@ -40,7 +40,7 @@
   flex-direction: row;
   width: 60%;
   height: 60%;
-  margin-left: -10px;
+  margin-right: 30px;
 }
 
 .logo-date {
@@ -84,7 +84,7 @@ input {
 }
 
 .fecha {
-  width: 60%;
+  width: 100%;
   margin-left: 40px;
   font-size: 10px;
   border: 1px solid;
@@ -140,7 +140,7 @@ input {
   .togglemodal {
     display: flex;
     cursor: pointer;
-    background-color: #ff9969;
+    background-color: #fca481;
     box-shadow: 4px 4px 4px #fcae8a;
     padding: 10px 20px;
     border-radius: 50px;

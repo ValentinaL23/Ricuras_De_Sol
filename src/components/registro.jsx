@@ -52,9 +52,9 @@ export default function Registro() {
             onChange={e => setRepContraseña(e.target.value)} />
         </div>
           <div className="container-R">
-            <Link className="togglemodalR" onClick={abrirModal} to='/home'>
+            <span className="togglemodalR" onClick={abrirModal}>
               Iniciar Sesión
-            </Link>
+            </span>
             <ModalR toggle={modalStateR} action={abrirModal} />
           </div>
       </form>

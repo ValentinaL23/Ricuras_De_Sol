@@ -13,12 +13,6 @@ export default function Home() {
   function openModal() {
     setModalState(!modalState)
   }
-  /*var input = document.getElementById('numero');
-  
-  input?.addEventListener('input', () => {
-    if (this.value.length > 12) 
-       this.value = this.value.slice(10);
-  })*/
 
   return (
     <div className="home">
